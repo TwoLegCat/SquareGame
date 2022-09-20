@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Ebene-1" vectornator:layerName="Ebene 1">
+<path d="M40 0L472 0C494.091 0 512 17.9086 512 40L512 472C512 494.091 494.091 512 472 512L40 512C17.9086 512 0 494.091 0 472L0 40C0 17.9086 17.9086 0 40 0Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+<g id="tower" vectornator:layerName="tower">
+<path d="M121 160L391 160C404.807 160 416 173.431 416 190L416 194C416 210.569 404.807 224 391 224L121 224C107.193 224 96 210.569 96 194L96 190C96 173.431 107.193 160 121 160Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M121 352L391 352C404.807 352 416 365.431 416 382L416 386C416 402.569 404.807 416 391 416L121 416C107.193 416 96 402.569 96 386L96 382C96 365.431 107.193 352 121 352Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M162.286 160L349.714 160C368.65 160 384 175.35 384 194.286L384 381.714C384 400.65 368.65 416 349.714 416L162.286 416C143.35 416 128 400.65 128 381.714L128 194.286C128 175.35 143.35 160 162.286 160Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M126.074 96L129.926 96C146.535 96 160 109.984 160 127.234L160 192.766C160 210.016 146.535 224 129.926 224L126.074 224C109.465 224 96 210.016 96 192.766L96 127.234C96 109.984 109.465 96 126.074 96Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M254.074 96L257.926 96C274.535 96 288 109.984 288 127.234L288 192.766C288 210.016 274.535 224 257.926 224L254.074 224C237.465 224 224 210.016 224 192.766L224 127.234C224 109.984 237.465 96 254.074 96Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M382.074 96L385.926 96C402.535 96 416 109.984 416 127.234L416 192.766C416 210.016 402.535 224 385.926 224L382.074 224C365.465 224 352 210.016 352 192.766L352 127.234C352 109.984 365.465 96 382.074 96Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Ebene-1" vectornator:layerName="Ebene 1">
+<path d="M40 0L472 0C494.091 0 512 17.9086 512 40L512 472C512 494.091 494.091 512 472 512L40 512C17.9086 512 0 494.091 0 472L0 40C0 17.9086 17.9086 0 40 0Z" fill="#1aa7ec" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M118.5 64C133.711 64 146 76.2829 146 91.4286L146 221.2L280.578 148.857C294.328 141.486 311 151.429 311 167.029L311 221.2L445.578 148.857C459.328 141.486 476 151.429 476 167.029L476 406.857C476 429.571 457.523 448 434.75 448L77.25 448C54.468 448 36 429.571 36 406.857L36 91.4286C36 76.2829 48.3148 64 63.5 64L118.5 64Z" fill="#ffffff" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/game.css">
+        <link href="./svg/player/creator.svg" rel="shortcut icon" type="image/x-icon">
+        <title>SG - Ingame</title>
+    </head>
+    <body onload="gameUpdate()">
+        <canvas id="canvas" onmouseenter="board.selected = true; mouse.inCanv = true" onmouseleave="board.selected = false; mouse.inCanv = false">
+            Your browser doesn't support the HTML5 canvas element!
+        </canvas>
+        <div class="graphics">
+            <p>Images used:</p>
+            <img src="./svg/shields/shield-blue.svg"    id="shieldBlue">
+            <img src="./svg/shields/shield-red.svg"     id="shieldRed">
+            <img src="./svg/shields/shield-gold.svg"    id="shieldGold">
+            <img src="./svg/shields/shield-green.svg"   id="shieldGreen">
+            <img src="./svg/player/creator.svg"         id="player">
+            <img src="./svg/skills/fire.svg"            id="fire">
+            <img src="./svg/skills/skull.svg"           id="damage">
+            <img src="./svg/skills/heart.svg"           id="hp">
+            <img src="./svg/battery/bolt.svg"           id="energy">
+            <img src="./svg/ui/x.svg"                   id="close">
+            <img src="./svg/battery/full.svg"           id="batteryFull">
+            <img src="./svg/ui/brush.svg"               id="brush">
+            <img src="./svg/undefined/js.svg"           id="js">
+            <!-- entities -->
+            <img src="./svg/entities/bug.svg"           id="bug">
+            <img src="./svg/entities/melee.svg"         id="melee">
+            <img src="./svg/entities/charger.svg"       id="charger">
+            <img src="./svg/entities/factory.svg"       id="factory">
+            <img src="./svg/entities/house.svg"         id="house">
+            <img src="./svg/entities/range.svg"         id="range">
+            <img src="./svg/entities/tower.svg"         id="tower">
+            <img src="./svg/entities/virus.svg"         id="virus">
+        
+        
+        </div>
+        <div id="windows">
+            
+        </div>
+        <input type="color" id="brushclr" value="#230622">
+        <button id="createWindow" onclick="createWindow(testEntity)">Create Window</button>
+        <div id="mobile"></div>
+        <script src="../js/game.js"></script>
+    </body>
+</html>

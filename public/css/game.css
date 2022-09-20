@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    background: #bbb;
+    height: 100vh;
+    width: 100vw;
+    /*overflow: hidden;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+canvas {
+    background: #ddd;
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    z-index: 0;
+    height: 850px;
+    width: 850px;
+}
+#brush {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.window {
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    border: 1px solid #000;
+    /*top: 300px;
+    left: 200px;*/
+    box-shadow: #000 5px 5px 10px;
+    background: #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+    user-select: none;
+}
+.navbar {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between ;
+    background: #fff;
+    height: 30px;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #000;
+    /*border-radius: 10px 10px 0 0;*/
+}
+.closebtn {
+    padding: 0 10px;
+    height: 30px;
+    width: 30px;
+    user-select: none;
+}
+.closebtn:hover {
+    background: #ff2e2e;
+    animation-name: blend;   
+    animation-duration: 0.3s;
+    cursor: pointer;
+}
+@keyframes blend {
+    0% {background: #ff2e2e00;}
+    100% {background: #ff2e2e;}
+}
+#leftImg {
+    padding: 0 10px;
+    user-select: none;
+}
+#createWindow {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.graphics {
+    display: none;
+}
+.entityName {
+    margin: auto;
+}

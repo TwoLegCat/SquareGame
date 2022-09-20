@@ -1,0 +1,17 @@
+Types:
+Tower
+Healer
+Meele
+Range
+Hacker
+Factory(Entities/Energy)
+
+Attacks:
+area
+specific
+row?
+column?
+
+movement/attack speed?
+
+level

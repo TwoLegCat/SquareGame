@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Ebene-1" vectornator:layerName="Ebene 1">
+<path d="M40 0L472 0C494.091 0 512 17.9086 512 40L512 472C512 494.091 494.091 512 472 512L40 512C17.9086 512 0 494.091 0 472L0 40C0 17.9086 17.9086 0 40 0Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M159.679 95.9428L352.321 95.9428C387.49 95.9428 416 125.636 416 162.264L416 349.622C416 386.25 387.49 415.943 352.321 415.943L159.679 415.943C124.51 415.943 96 386.25 96 349.622L96 162.264C96 125.636 124.51 95.9428 159.679 95.9428Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<g opacity="1">
+<path d="M176 128L176 128C184.837 128 192 135.163 192 144L192 208C192 216.837 184.837 224 176 224L176 224C167.163 224 160 216.837 160 208L160 144C160 135.163 167.163 128 176 128Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M144 160L208 160C216.837 160 224 167.163 224 176L224 176C224 184.837 216.837 192 208 192L144 192C135.163 192 128 184.837 128 176L128 176C128 167.163 135.163 160 144 160Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+<g opacity="1">
+<path d="M240 256L240 256C248.837 256 256 263.163 256 272L256 336C256 344.837 248.837 352 240 352L240 352C231.163 352 224 344.837 224 336L224 272C224 263.163 231.163 256 240 256Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M208 288L272 288C280.837 288 288 295.163 288 304L288 304C288 312.837 280.837 320 272 320L208 320C199.163 320 192 312.837 192 304L192 304C192 295.163 199.163 288 208 288Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+<g opacity="1">
+<path d="M336 160L336 160C344.837 160 352 167.163 352 176L352 240C352 248.837 344.837 256 336 256L336 256C327.163 256 320 248.837 320 240L320 176C320 167.163 327.163 160 336 160Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M304 192L368 192C376.837 192 384 199.163 384 208L384 208C384 216.837 376.837 224 368 224L304 224C295.163 224 288 216.837 288 208L288 208C288 199.163 295.163 192 304 192Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="base" vectornator:layerName="base">
+<path d="M40 0L472 0C494.091 0 512 17.9086 512 40L512 472C512 494.091 494.091 512 472 512L40 512C17.9086 512 0 494.091 0 472L0 40C0 17.9086 17.9086 0 40 0Z" fill="#1e2f97" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+<g id="sword" vectornator:layerName="sword">
+<g opacity="1">
+<path d="M405.668 106.332L405.668 106.332C419.444 120.109 419.444 142.445 405.668 156.222L156.222 405.668C142.445 419.444 120.109 419.444 106.332 405.668L106.332 405.668C92.5559 391.891 92.5559 369.555 106.332 355.778L355.778 106.332C369.555 92.5559 391.891 92.5559 405.668 106.332Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M156.695 256.473L255.527 355.305C269.565 369.343 269.777 391.891 256 405.668L256 405.668C242.223 419.444 219.676 419.232 205.638 405.195L106.805 306.362C92.7677 292.324 92.5559 269.777 106.332 256L106.332 256C120.109 242.223 142.657 242.435 156.695 256.473Z" fill="#f9f9f9" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</g>
+</svg>
