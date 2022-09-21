@@ -1,9 +1,9 @@
 Types:
-Tower
-Healer
 Meele
 Range
-Hacker
+Tower
+Healer
+Virus
 Factory(Entities/Energy)
 
 Attacks:
@@ -11,7 +11,5 @@ area
 specific
 row?
 column?
-
-movement/attack speed?
 
 level

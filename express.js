@@ -1,4 +1,5 @@
 const express = require('express');
+const port = 9091;
 const app = express();
 app.use(express.static("public"));
 app.get("/game", (req, res) => {
@@ -10,4 +11,4 @@ app.get("/login", (req, res) => {
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/templates/index.html")
 })
-app.listen(9091, () => {console.log("Express server listening on 9091")});
+app.listen(port, () => {console.log(`Express server listening on ${port}`)});
