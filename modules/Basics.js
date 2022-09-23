@@ -1,9 +1,8 @@
 export default class Basics {
     
-    constructor(x, y, hp) {
+    constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.hp = hp;
     }
     lvl = 0;
     tile = {
