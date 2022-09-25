@@ -1,18 +1,23 @@
-import Basics from "./Basics.js";
-import { Upgrades } from "./upgrades/upMeele.js"
-export default class Meele extends Basics {
-    type = "meele"
-    //paths
-    range = 1;
-    atkspd = 1000;
+const Basics = require("./Basics.js");
+class Range extends Basics {
+    type = "range";
+    //main
+    range = 3;
+    atkspd = 1500;
     atkdmg = 10;
     cmds = 5;
-    hp = 400
+    hp = 200;
+    //weapon
+    ability = 1.1;
+    perc = 0.2;
+    addcrit = 10;
+    //artifacts
+    slots = 3;
     //id
-    id = 0;
-    constructor(x, y, team) {
+    id = "";
+    constructor(x=0, y=0, team="blue") {
         super(x, y);
-        this.team = team ? "blue" : "red";
+        this.team = team == "blue" ? "blue" : "red";
     }
     upgrade(path, lvl="0") {
         switch(path) {

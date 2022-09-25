@@ -16,7 +16,7 @@ class Basics {
             }
 
         };
-        this.id = eid();
+        //this.id = eid();
     }
     move(dir) { 
         let i = 0;
@@ -136,7 +136,7 @@ function add(x) {
 }
 const ws = new WebSocket("ws://localhost:9090");                    
 ws.addEventListener('open', () => {
-    ws.send("sheesh");
+    //ws.send();
 });
 ws.addEventListener('message', e => {
     console.log(`res: "${e.data}"`);
@@ -153,6 +153,16 @@ for(let i = 0; i < 17; i++) {
 }
 const canv = document.getElementById("canvas");
 canv.width = canv.height = 850;
+canv.onmouseenter = () => {
+    board.selected = true;
+    mouse.inCanv = true;
+}
+canv.onmouseleave = () => {
+    board.selected = false;
+    mouse.inCanv = false;
+    mouse.tile.content = "No tile to check!";
+}
+
 const ctx = canv.getContext("2d");
 const mouse = {
     x: 0,
@@ -169,13 +179,15 @@ const mouse = {
     tile: {
         x: 0,
         y: 0,
-        content: {}
+        content: {undefined: undefined}
     }
 }
 const player = document.getElementById("player");
 let batteryFull = document.getElementById("batteryFull");
 let yellowArr = [];
 let key = "";
+//import { testExport } from "./exportTest.js"
+//console.log(testExport);
 window.addEventListener("keydown", e => {
     if(!(key.includes(e.key))) key += e.key;
     if(key.includes("s")) {
@@ -249,42 +261,42 @@ let creator = new Creator();
 creator.sync();
 let melee = document.getElementById("melee");
 let js = document.getElementById("js");
-const windowDiv = document.getElementById("windows");
+const winDiv = document.getElementById("windows");
 function createWindow(entity) {
     let reposition = false;
-    let window = document.createElement("div");
+    let win = document.createElement("div");
     let navbar = document.createElement("div");
     let x = document.createElement("img");
     let entityImg = document.createElement("img");
     let name = document.createElement("span");
     name.innerHTML = entity.name;
     name.className = "entityName";
-    window.className = "window";
+    win.className = "window";
     navbar.className = "navbar";
     x.className = "closebtn";
     x.src = "svg/ui/x.svg";
     x.draggable = false;
-    x.onclick = () => {window.remove(); if(mouse.inCanv) board.selected = true}
+    x.onclick = () => {win.remove(); if(mouse.inCanv) board.selected = true}
     entityImg.src = entity.src;
     entityImg.draggable = false;
-    window.style.top = 300 + "px";
-    window.style.left = 300 + "px";
+    win.style.top = 300 + "px";
+    win.style.left = 300 + "px";
     navbar.onmousedown = () => {reposition = true;}
     navbar.onmouseup = () => {reposition = false;}
-    window.onmouseenter = () => {board.selected = false;}
-    window.onmouseleave = () => {if(mouse.inCanv) board.selected = true;}
-    this.addEventListener("mousemove", function(evt) {
+    win.onmouseenter = () => {board.selected = false;}
+    win.onmouseleave = () => {if(mouse.inCanv) board.selected = true;}
+    window.addEventListener("mousemove", function(evt) {
         if(reposition) {
             let latest = {
-                x: +(window.style.left.replace("px","")), 
-                y: +(window.style.top.replace("px",""))
+                x: +(win.style.left.replace("px","")), 
+                y: +(win.style.top.replace("px",""))
             }
-            window.style.left = latest.x + evt.movementX + "px";
-            window.style.top = latest.y + evt.movementY + "px";
+            win.style.left = latest.x + evt.movementX + "px";
+            win.style.top = latest.y + evt.movementY + "px";
         }
     });
-    windowDiv.appendChild(window);
-    window.appendChild(navbar);
+    winDiv.appendChild(win);
+    win.appendChild(navbar);
     navbar.appendChild(entityImg);
     navbar.appendChild(name);
     navbar.appendChild(x);
@@ -293,6 +305,8 @@ let testEntity = {
     name: "feuer",
     src: "svg/battery/full.svg"
 };
+const createBtn = document.querySelector("#createWindow");
+createBtn.onclick = () => {createWindow(testEntity);};
 function gameUpdate() {
     requestAnimationFrame(gameUpdate);
     ctx.clearRect(0, 0, canv.width, canv.height);
@@ -333,3 +347,4 @@ console.log("%cLeave", `
     font-size: 100px; 
     color: #f21b2d;
 `);
+gameUpdate();

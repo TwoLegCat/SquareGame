@@ -1,3 +1,7 @@
+const Melee = require('./modules/Melee.js')
+let m = new Melee(100, 200, 0);
+console.log(m)
+
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({port: 9090});
 
@@ -32,7 +36,7 @@ wss.on('connection', con => {
         name: "Default Name"
     }
     console.log("Connected!");
-    con.on('close',  () => {
+    con.on('close', () => {
         console.log(`${users[user].id} disconnected!`);
         delete users[user];
         console.log(users)

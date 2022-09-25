@@ -1,17 +1,19 @@
 # SquareGame
  A board game
 # Entities
- ## Meele
+ ## Melee
  ## Range
  ## Area
+ ## Protector
 
  ## Electric field
-
+ ## Spy
  ## Healer
  ## Virus
-
  ## Bug
- ## Buffer
+ ## Buffer (genereal stat buff);
+ only in team area
 
- ## House
- ## Factory
+ ## Entifactory
+ ## Artifactory (a-facs)
+ ## Electrifactory (e-facs)

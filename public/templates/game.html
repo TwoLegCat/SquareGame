@@ -8,8 +8,8 @@
         <link href="./svg/player/creator.svg" rel="shortcut icon" type="image/x-icon">
         <title>SG - Ingame</title>
     </head>
-    <body onload="gameUpdate()">
-        <canvas id="canvas" onmouseenter="board.selected = true; mouse.inCanv = true" onmouseleave="board.selected = false; mouse.inCanv = false">
+    <body>
+        <canvas id="canvas">
             Your browser doesn't support the HTML5 canvas element!
         </canvas>
         <div class="graphics">
@@ -43,8 +43,8 @@
             
         </div>
         <input type="color" id="brushclr" value="#230622">
-        <button id="createWindow" onclick="createWindow(testEntity)">Create Window</button>
+        <button id="createWindow">Create Window</button>
         <div id="mobile"></div>
-        <script src="../js/game.js"></script>
+        <script src="../js/game.js" type="module"></script>
     </body>
 </html>

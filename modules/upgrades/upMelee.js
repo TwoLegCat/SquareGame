@@ -1,4 +1,4 @@
-export const Upgrades = {
+const Upgrades = {
     range: {
         "0": 1,
         "1": 2
@@ -32,3 +32,4 @@ export const Upgrades = {
         "4": 5000
     }
 }
+module.exports = Upgrades;
