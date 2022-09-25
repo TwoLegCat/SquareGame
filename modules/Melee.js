@@ -2,14 +2,15 @@ const Basics = require("./Basics.js")
 const Upgrades = require("./upgrades/upMelee.js")
 class Melee extends Basics {
     type = "melee";
+    id = "";
     //paths
     range = 1;
     atkspd = 1000;
     atkdmg = 10;
     cmds = 5;
     hp = 400
-    //id
-    id = "";
+    artifacts = [{}, {}, {}];
+
     constructor(x=0, y=0, team="blue") {
         super(x, y);
         this.team = team == "blue" ? "blue" : "red";
