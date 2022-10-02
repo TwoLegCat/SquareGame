@@ -9,9 +9,7 @@
         <title>SG - Ingame</title>
     </head>
     <body>
-        <canvas id="canvas">
-            Your browser doesn't support the HTML5 canvas element!
-        </canvas>
+        <canvas id="canvas"></canvas>
         <div class="graphics">
             <p>Images used:</p>
             <img src="./svg/shields/shield-blue.svg"    id="shieldBlue">
@@ -27,24 +25,34 @@
             <img src="./svg/battery/full.svg"           id="batteryFull">
             <img src="./svg/ui/brush.svg"               id="brush">
             <img src="./svg/undefined/js.svg"           id="js">
-            <!-- entities -->
-            <img src="./svg/entities/bug.svg"           id="bug">
-            <img src="./svg/entities/melee.svg"         id="melee">
-            <img src="./svg/entities/charger.svg"       id="charger">
-            <img src="./svg/entities/factory.svg"       id="factory">
-            <img src="./svg/entities/house.svg"         id="house">
-            <img src="./svg/entities/range.svg"         id="range">
-            <img src="./svg/entities/tower.svg"         id="tower">
-            <img src="./svg/entities/virus.svg"         id="virus">
+            <!-- entities purple-->
+            <img src="./svg/entities/purple/bit.svg" id="Pbit">
+            <img src="./svg/entities/purple/ping.svg" id="Pping">
+            <img src="./svg/entities/purple/ram.svg" id="Pram">
+            <img src="./svg/entities/purple/ssd.svg" id="Pssd">
+            <img src="./svg/entities/purple/wlan.svg" id="Pwlan">
+            <!-- entities green-->
+            <img src="./svg/entities/green/bit.svg" id="Gbit">
+            <img src="./svg/entities/green/ping.svg" id="Gping">
+            <img src="./svg/entities/green/ram.svg" id="Gram">
+            <img src="./svg/entities/green/ssd.svg" id="Gssd">
+            <img src="./svg/entities/green/wlan.svg" id="Gwlan">
         
         
         </div>
         <div id="windows">
             
         </div>
-        <input type="color" id="brushclr" value="#230622">
         <button id="createWindow">Create Window</button>
-        <div id="mobile"></div>
+        <div id="sidebar">
+            <div class="sideBarOption" id="explorer"></div>
+            <div class="sideBarOption sboa"></div>
+            <div class="sideBarOption"></div>
+            <div class="sideBarOption"></div>
+            <div class="sideBarOption"></div>
+            <div class="sideBarOption" id="shop"></div>
+        </div>
+        <input type="color">
         <script src="../js/game.js" type="module"></script>
     </body>
 </html>

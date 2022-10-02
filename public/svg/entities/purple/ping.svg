@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Ebene-1">
+<path d="M104 64L408 64C430.091 64 448 81.9086 448 104L448 408C448 430.091 430.091 448 408 448L104 448C81.9086 448 64 430.091 64 408L64 104C64 81.9086 81.9086 64 104 64Z" fill="#b87fdb" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M148 256L172 256C183.046 256 192 264.909 192 275.898L192 364.102C192 375.091 183.046 384 172 384L148 384C136.954 384 128 375.091 128 364.102L128 275.898C128 264.909 136.954 256 148 256Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M244 192L268 192C279.046 192 288 200.924 288 211.933L288 364.067C288 375.076 279.046 384 268 384L244 384C232.954 384 224 375.076 224 364.067L224 211.933C224 200.924 232.954 192 244 192Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M340 128L364 128C375.046 128 384 136.944 384 147.978L384 364.022C384 375.056 375.046 384 364 384L340 384C328.954 384 320 375.056 320 364.022L320 147.978C320 136.944 328.954 128 340 128Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>

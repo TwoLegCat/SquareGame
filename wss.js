@@ -25,9 +25,14 @@ const users = {};
 let data = {};
 wss.on('connection', con => {
     const user = id();
-    con.on('message', msg => {
-        let object = JSON.parse(msg);
-        users[user].name = object.name;
+    con.on('message', message => {
+        let msg = JSON.parse(message);
+        if (msg.type === 'move') {
+            msg.object.tile.x++
+        }
+        
+        
+        users[user].name = msg.name;
         console.log(users[user]);
     });
     users[user] = {

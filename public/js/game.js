@@ -8,7 +8,6 @@ class Basics {
         this.hp = hp;
         this.lvl = lvl;
         this.mv = {
-            path: [],
             isMoving: false,
             a: {
                 x: 0,
@@ -112,19 +111,7 @@ class Entity extends Basics {
     }
 }
 function xy(xy) {
-    return xy * 50 + 10;
-}
-let gameCode = "";
-function createGameCode() {
-    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for(let i = 0; i < 6; i++) {
-        gameCode += chars[~~(Math.random() * chars.length)];
-    }
-    return gameCode;
-}
-createGameCode();
-function drawImg(img, x, y) {
-    ctx.drawImage(img, xy(x), xy(y), 30, 30);
+    return xy * 50;
 }
 function curve(x) {
     //return .5 * Math.sin((x - .5) * Math.PI) + .5
@@ -151,6 +138,7 @@ for(let i = 0; i < 17; i++) {
         field[i].splice(j, 0, {occupied: false});
     }
 }
+//def canvas
 const canv = document.getElementById("canvas");
 canv.width = canv.height = 850;
 canv.onmouseenter = () => {
@@ -162,8 +150,8 @@ canv.onmouseleave = () => {
     mouse.inCanv = false;
     mouse.tile.content = "No tile to check!";
 }
-
 const ctx = canv.getContext("2d");
+//def mouse object
 const mouse = {
     x: 0,
     y: 0,
@@ -180,26 +168,49 @@ const mouse = {
         x: 0,
         y: 0,
         content: {undefined: undefined}
+    },
+    hover() {
+        if(board.selected) {
+            if(mouse.inCanv) {
+                ctx.beginPath();
+                ctx.fillStyle = "#dddddd50"; 
+                ctx.fillRect(mouse.tile.x * 50, mouse.tile.y * 50, 50, 50);
+                ctx.fill();
+            }
+        }
     }
 }
+//def img
 const player = document.getElementById("player");
-let batteryFull = document.getElementById("batteryFull");
-let yellowArr = [];
-let key = "";
+const Pbit = document.querySelector("#Pbit");
+const Pping = document.querySelector("#Pping");
+const Pram = document.querySelector("#Pram");
+const Pssd = document.querySelector("#Pssd");
+const Pwlan = document.querySelector("#Pwlan");
+
+const Gbit = document.querySelector("#Gbit");
+const Gping = document.querySelector("#Gping");
+const Gram = document.querySelector("#Gram");
+const Gssd = document.querySelector("#Gssd");
+const Gwlan = document.querySelector("#Gwlan");
+
+const Keyboard = {
+    key: ""
+}
 //import { testExport } from "./exportTest.js"
 //console.log(testExport);
 window.addEventListener("keydown", e => {
-    if(!(key.includes(e.key))) key += e.key;
-    if(key.includes("s")) {
+    if(!(Keyboard.key.includes(e.key))) Keyboard.key += e.key;
+    if(Keyboard.key.includes("s")) {
         creator.move("down");
     }
-    if(key.includes("d")) {
+    if(Keyboard.key.includes("d")) {
         creator.move("right");
     }
-    if(key.includes("w")) {
+    if(Keyboard.key.includes("w")) {
         creator.move("up");
     }
-    if(key.includes("a")) {
+    if(Keyboard.key.includes("a")) {
         creator.move("left");
     }
     //console.log(evt.key)
@@ -208,7 +219,7 @@ let testArr = [[{hallo: "yello"}]];
 //console.log(testArr[0][0].stallo == undefined);
 //true
 window.addEventListener("keyup", e => {
-    key = key.replace(e.key, "");
+    Keyboard.key = Keyboard.key.replace(e.key, "");
     //console.log(key)
 });
 window.addEventListener("mousedown", e => {
@@ -319,29 +330,22 @@ function gameUpdate() {
         ctx.moveTo(0, i * 50);
         ctx.lineTo(canv.width, i * 50);
     }
-    ctx.strokeStyle = "#000";
+    ctx.strokeStyle = "#ddd";
     ctx.stroke();
-    if(board.selected) {
-        if(mouse.inCanv) {
-            ctx.beginPath();
-            ctx.fillStyle = "#24242450"; 
-            ctx.fillRect(mouse.tile.x * 50, mouse.tile.y * 50, 50, 50);
-            ctx.fill();
-        }
-    }
     //Kreise drawen im arr
-    yellowArr.forEach(proj => {
-        proj.draw();
-    });
+    mouse.hover();
     creator.draw();
-    drawImg(bug, 5, 5);
-    drawImg(melee, 6, 6);
-    drawImg(js, 7, 7);
-    //ctx.drawImage(bug, x(5), y(5), 30, 30)
-    //ctx.drawImage(bug, x(5), y(5), 30, 30)
-    /*ctx.font = "30px Arial";
-    ctx.fillStyle = "#000";
-    ctx.fillText("Code: " + createGameCode(), 50, 50);*/
+    ctx.drawImage(Pbit, xy(5), xy(6), 50, 50)
+    ctx.drawImage(Pping, xy(5), xy(7), 50, 50)
+    ctx.drawImage(Pram, xy(5), xy(8), 50, 50)
+    ctx.drawImage(Pssd, xy(5), xy(9), 50, 50)
+    ctx.drawImage(Pwlan, xy(5), xy(10), 50, 50)
+    ctx.drawImage(Gbit, xy(6), xy(6), 50, 50)
+    ctx.drawImage(Gping, xy(6), xy(7), 50, 50)
+    ctx.drawImage(Gram, xy(6), xy(8), 50, 50)
+    ctx.drawImage(Gssd, xy(6), xy(9), 50, 50)
+    ctx.drawImage(Gwlan, xy(6), xy(10), 50, 50)
+
 }
 console.log("%cLeave", `
     font-size: 100px; 

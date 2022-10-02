@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Ebene-1">
+<path d="M104 64L408 64C430.091 64 448 81.9086 448 104L448 408C448 430.091 430.091 448 408 448L104 448C81.9086 448 64 430.091 64 408L64 104C64 81.9086 81.9086 64 104 64Z" fill="#91d7c3" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M128 176C128 158.35 142.35 144 160 144L352 144C369.65 144 384 158.35 384 176L384 268.2C375.5 260.6 364.3 256 352 256L160 256C147.7 256 136.5 260.6 128 268.2L128 176ZM160 272L352 272C369.65 272 384 286.35 384 304L384 336C384 353.65 369.65 368 352 368L160 368C142.35 368 128 353.65 128 336L128 304C128 286.35 142.35 272 160 272ZM352 320C352 311.15 344.85 304 336 304C327.15 304 320 311.15 320 320C320 328.85 327.15 336 336 336C344.85 336 352 328.85 352 320Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>

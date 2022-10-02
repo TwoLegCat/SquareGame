@@ -6,12 +6,15 @@
  ## Area
  ## Protector
 
+
  ## Electric field
  ## Spy
+
  ## Healer
  ## Virus
+ 
  ## Bug
- ## Buffer (genereal stat buff);
+ ## Defender (genereal stat buff);
  only in team area
 
  ## Entifactory
