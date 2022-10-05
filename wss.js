@@ -30,15 +30,39 @@ wss.on('connection', con => {
         if (msg.type === 'move') {
             msg.object.tile.x++
         }
+        if(msg.type === 'newUser') {
+            users[user].name = msg.name;
+            console.log(users[user])
+        }
         
-        
-        users[user].name = msg.name;
-        console.log(users[user]);
     });
     users[user] = {
         connection: con,
+        name: "",
         id: user,
-        name: "Default Name"
+        pcs: {
+            adc: {},
+            rgc: {},
+            asc: {},
+            hpc: {},
+            cdc: {},
+
+            spy: {},
+            esf: {},
+
+            vrs: {},
+            hlr: {},
+
+            bug: {},
+            def: {},
+
+            afy: {},
+            efy: {},
+            ify: {}
+
+        },
+        money: 0,
+
     }
     console.log("Connected!");
     con.on('close', () => {

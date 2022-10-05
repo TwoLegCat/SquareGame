@@ -1,13 +1,14 @@
 # SquareGame
  A board game
 # Entities
+ components
  ## Melee
  ## Range
  ## Area
  ## Protector
 
 
- ## Electric field
+ ## Electrostatic field
  ## Spy
 
  ## Healer
@@ -19,4 +20,4 @@
 
  ## Entifactory
  ## Artifactory (a-facs)
- ## Electrifactory (e-facs)
+ ## Intellifactory (e-facs)

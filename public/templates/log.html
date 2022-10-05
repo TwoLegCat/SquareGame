@@ -21,11 +21,11 @@
             <hr>
             <div id="form">
                 <label for="">Name</label><br>
-                <input type="text" placeholder="Name" maxlength="20" id="name">
+                <input type="text" placeholder="Name" maxlength="20" id="name" onfocus=check()>
                 <p id="nameInfo" style="font-size: 12px;"></p>
                 <br><br>
-                <label for="">Code</label><br>
-                <input type="text" maxlength="6" placeholder="Code" id="gameCode"><br><br>
+                <label for="">Passwort</label><br>
+                <input type="password" placeholder="******" id="pw"><br><br>
                 <button onclick="submit()">Start</button>
                 <p>Don't have an account yet?</p>
                 <a href="register.html">Create a new account</a>

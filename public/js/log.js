@@ -1,25 +1,33 @@
 console.log("You're on the login page");
+let info = document.querySelector("#nameInfo");
 function check() {
-    requestAnimationFrame(check);
-    let codeInput = document.getElementById("gameCode");
-    let nameInput = document.querySelector("#name");
-    let info = document.querySelector("#nameInfo");
-    codeInput.value = codeInput.value.toUpperCase();
-    if(codeInput == document.activeElement || nameInput == document.activeElement) {
-        if(nameInput.value.length > 16 || nameInput.value.length == 0) {
+    //requestAnimationFrame(check);
+    let name = document.querySelector("#name");
+    let pw = document.getElementById("pw");
+    if(pw == document.activeElement || name == document.activeElement) {
+        if(name.value.length > 16 || name.value.length == 0) {
             info.innerHTML = "Invalid Name"
             info.style.color = "red";
         } else {
             info.innerHTML = "Valid Name"
             info.style.color = "lime";
         }
+        requestAnimationFrame(check);
+        console.log("checking")
+        isOffensive(name.value)
+    }
+}
+const pattern = /(penis|vagin|anu|sex|gay|scheiß|schwarz|nigg|f.ck|n.tte|boob|t.tte|br.st|)/i;
+function isOffensive(name) {
+    if (pattern.test(name)) {
+        console.log("not okay")
+    } else {
+        console.log("okay")
     }
 }
 const user = {
     name: "",
     pw: "",
-    id: "",
-    con: {}
 }
 const ws = new WebSocket("ws://localhost:9090");                    
 ws.addEventListener('open', () => {
