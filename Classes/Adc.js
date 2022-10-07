@@ -6,9 +6,8 @@ const upgrades = {
     cmds: [5, 10, 15, 20, 30],
     hp: [400, 1000, 1500, 3000, 5000]
 }
-class Bit extends Basics {
-    type = "melee";
-    id = "";
+class ADC extends Basics {
+    type = "adc";
     //paths
     range = 1; //wlan
     atkspd = 1000; //ping
@@ -18,11 +17,16 @@ class Bit extends Basics {
     artifacts = [{}, {}, {}];
 
     lvl = 0;
-    
 
-    constructor(x=0, y=0, team="blue") {
+    //weapon
+    ability = 1.1;
+    perc = 0.2;
+    addcrit = 10;
+
+    constructor(x=0, y=0, team="green", id="") {
         super(x, y);
         this.team = team;
+        this.id = id;
     }
     upgrade(path, lvl=0) {
         switch(path) {
@@ -36,11 +40,11 @@ class Bit extends Basics {
             break;
             case "hp": this.hp = upgrades.hp[lvl];
             break;
-            default: console.error(`${path} doesnt exist for ${this.type}`);
+            default: this.lvl++;
         }
     }
 }
-module.exports = Bit;
+module.exports = ADC;
 /*
 purple
 #ca92ec

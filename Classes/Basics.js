@@ -7,6 +7,5 @@ class Basics {
             y: ~~(this.y / 50)
         };
     }
-    lvl = 0;
 }
 module.exports = Basics;

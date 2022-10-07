@@ -317,7 +317,15 @@ let testEntity = {
     src: "svg/battery/full.svg"
 };
 const createBtn = document.querySelector("#createWindow");
-createBtn.onclick = () => {createWindow(testEntity);};
+createBtn.onclick = () => {
+    createWindow(testEntity);
+    let msg = {
+        type: "request",
+        entity: "adc"
+    }
+    let json = JSON.stringify(msg);
+    ws.send(json);
+};
 function gameUpdate() {
     requestAnimationFrame(gameUpdate);
     ctx.clearRect(0, 0, canv.width, canv.height);

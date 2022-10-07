@@ -17,7 +17,7 @@ function check() {
         isOffensive(name.value)
     }
 }
-const pattern = /(penis|vagin|anu|sex|gay|scheiß|schwarz|nigg|f.ck|n.tte|boob|t.tte|br.st|)/i;
+const pattern = /(penis|vagin|anu|sex|gay|scheiß|schwarz|nigg|f.ck|n.tte|boob|t.tte|br.st|enetr|ichse|ixxe)/i;
 function isOffensive(name) {
     if (pattern.test(name)) {
         console.log("not okay")

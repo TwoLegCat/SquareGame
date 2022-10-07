@@ -1,5 +1,5 @@
-const Melee = require('./modules/Melee.js')
-let m = new Melee(100, 200, 0);
+const Adc = require('./Classes/Adc.js')
+let m = new Adc(100, 200, "green", "fsadf");
 console.log(m)
 
 const WebSocket = require('ws');
@@ -27,11 +27,18 @@ wss.on('connection', con => {
     const user = id();
     con.on('message', message => {
         let msg = JSON.parse(message);
+        console.log(msg)
         if (msg.type === 'move') {
             msg.object.tile.x++
         }
-        if(msg.type === 'newUser') {
+        if (msg.type === 'newUser') {
             users[user].name = msg.name;
+            console.log(users[user])
+        }
+        if (msg.type === 'request') {
+            switch (msg.entity) {
+                case "adc": users[user].pcs.adc["ashjd"] = new Adc(200, 300, "purple", "fad")
+            }
             console.log(users[user])
         }
         
