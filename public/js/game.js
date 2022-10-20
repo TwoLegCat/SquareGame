@@ -19,15 +19,15 @@ class Basics {
     }
     move(dir) { 
         let i = 0;
-        if(dir == "right") {  
-            if(this.tile.x < 16) {
-                if(field[this.tile.x + 1][this.tile.y].occupied == false) {
+        if (dir == "right") {  
+            if (this.tile.x < 16) {
+                if (field[this.tile.x + 1][this.tile.y].occupied == false) {
                     field[this.tile.x][this.tile.y] = {occupied: false}
                     field[this.tile.x + 1][this.tile.y] = this;
                     this.mv.isMoving = true;
                     let temp = setInterval(() => {
                         this.mv.a.x = curve(i++);
-                        if(i == 10) {
+                        if (i == 10) {
                             clearInterval(temp);
                             this.mv.a.x = 0;
                             this.tile.x++;
@@ -41,14 +41,14 @@ class Basics {
                 console.error("entity on edge");
             }
         }
-        if(dir == "left") {
-            if(this.tile.x > 0) {
+        if (dir == "left") {
+            if (this.tile.x > 0) {
                 field[this.tile.x][this.tile.y] = {occupied: false}
                 field[this.tile.x - 1][this.tile.y] = this;
                 this.mv.isMoving = true;
                 let temp = setInterval(() => {
                     this.mv.a.x = -curve(i++);
-                    if(i == 10) {
+                    if (i == 10) {
                         clearInterval(temp);
                         this.mv.a.x = 0;
                         this.tile.x--;
@@ -57,14 +57,14 @@ class Basics {
                 }, 50);
             }
         }
-        if(dir == "down") {
-            if(this.tile.y < 16) {
+        if (dir == "down") {
+            if (this.tile.y < 16) {
                 field[this.tile.x][this.tile.y] = {occupied: false}
                 field[this.tile.x][this.tile.y + 1] = this;
                 this.mv.isMoving = true;
                 let temp = setInterval(() => {
                     this.mv.a.y = curve(i++);
-                    if(i == 10) {
+                    if (i == 10) {
                         clearInterval(temp);
                         this.mv.a.y = 0;
                         this.tile.y++;
@@ -73,14 +73,14 @@ class Basics {
                 }, 50);
             }
         }
-        if(dir == "up") {
-            if(this.tile.y > 0) {
+        if (dir == "up") {
+            if (this.tile.y > 0) {
                 field[this.tile.x][this.tile.y] = {occupied: false}
                 field[this.tile.x][this.tile.y - 1] = this;
                 this.mv.isMoving = true;
                 let temp = setInterval(() => {
                     this.mv.a.y = -curve(i++);
-                    if(i == 10) {
+                    if (i == 10) {
                         clearInterval(temp);
                         this.mv.a.y = 0;
                         this.tile.y--;
@@ -132,9 +132,9 @@ const board = {
     selected: true
 };
 const field = [];
-for(let i = 0; i < 17; i++) {
+for (let i = 0; i < 17; i++) {
     field.splice(i, 0, []);
-    for(let j = 0; j < 17; j++) {
+    for (let j = 0; j < 17; j++) {
         field[i].splice(j, 0, {occupied: false});
     }
 }
@@ -170,8 +170,8 @@ const mouse = {
         content: {undefined: undefined}
     },
     hover() {
-        if(board.selected) {
-            if(mouse.inCanv) {
+        if (board.selected) {
+            if (mouse.inCanv) {
                 ctx.beginPath();
                 ctx.fillStyle = "#dddddd50"; 
                 ctx.fillRect(mouse.tile.x * 50, mouse.tile.y * 50, 50, 50);
@@ -200,17 +200,17 @@ const Keyboard = {
 //import { testExport } from "./exportTest.js"
 //console.log(testExport);
 window.addEventListener("keydown", e => {
-    if(!(Keyboard.key.includes(e.key))) Keyboard.key += e.key;
-    if(Keyboard.key.includes("s")) {
+    if (!(Keyboard.key.includes(e.key))) Keyboard.key += e.key;
+    if (Keyboard.key.includes("s")) {
         creator.move("down");
     }
-    if(Keyboard.key.includes("d")) {
+    if (Keyboard.key.includes("d")) {
         creator.move("right");
     }
-    if(Keyboard.key.includes("w")) {
+    if (Keyboard.key.includes("w")) {
         creator.move("up");
     }
-    if(Keyboard.key.includes("a")) {
+    if (Keyboard.key.includes("a")) {
         creator.move("left");
     }
     //console.log(evt.key)
@@ -226,14 +226,14 @@ window.addEventListener("mousedown", e => {
     //console.log(evt.button);
     mouse.state.button = e.button;
     mouse.state.isDown = true;
-    if(e.button == 2) {
+    if (e.button == 2) {
         canv.style.cursor = "help";
         console.log(mouse.tile.content);
     }
 });
 window.addEventListener("mouseup", e => {
     //console.log(evt);
-    if(e.button == 2) {
+    if (e.button == 2) {
         canv.style.cursor = "default";
     }
     mouse.state.isDown = false;
@@ -287,7 +287,7 @@ function createWindow(entity) {
     x.className = "closebtn";
     x.src = "svg/ui/x.svg";
     x.draggable = false;
-    x.onclick = () => {win.remove(); if(mouse.inCanv) board.selected = true}
+    x.onclick = () => {win.remove(); if (mouse.inCanv) board.selected = true}
     entityImg.src = entity.src;
     entityImg.draggable = false;
     win.style.top = 300 + "px";
@@ -295,9 +295,9 @@ function createWindow(entity) {
     navbar.onmousedown = () => {reposition = true;}
     navbar.onmouseup = () => {reposition = false;}
     win.onmouseenter = () => {board.selected = false;}
-    win.onmouseleave = () => {if(mouse.inCanv) board.selected = true;}
+    win.onmouseleave = () => {if (mouse.inCanv) board.selected = true;}
     window.addEventListener("mousemove", function(evt) {
-        if(reposition) {
+        if (reposition) {
             let latest = {
                 x: +(win.style.left.replace("px","")), 
                 y: +(win.style.top.replace("px",""))
@@ -332,7 +332,7 @@ function gameUpdate() {
     canv.style.top = (innerHeight - canv.height) / 2 + "px";
     canv.style.left = (innerWidth - canv.width) / 2 + "px";
     ctx.beginPath();
-    for(let i = 0; i < 18; i++) {
+    for (let i = 0; i < 18; i++) {
         ctx.moveTo(i * 50, 0);
         ctx.lineTo(i * 50, canv.height);
         ctx.moveTo(0, i * 50);

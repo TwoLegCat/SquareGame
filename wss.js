@@ -1,5 +1,5 @@
-const Adc = require('./Classes/Adc.js')
-let m = new Adc(100, 200, "green", "fsadf");
+const adc = require('./Classes/adc.js')
+let m = new adc(100, 200, "green", "fsadf");
 console.log(m)
 
 const WebSocket = require('ws');
@@ -12,9 +12,9 @@ function move(dir) {
 
     }
 }
-for(let i = 0; i < 17; i++) {
+for (let i = 0; i < 17; i++) {
     field[i] = [];
-    for(let j = 0; j < 17; j++) {
+    for (let j = 0; j < 17; j++) {
         field[i][j] = {};
     }
 }
@@ -37,7 +37,7 @@ wss.on('connection', con => {
         }
         if (msg.type === 'request') {
             switch (msg.entity) {
-                case "adc": users[user].pcs.adc["ashjd"] = new Adc(200, 300, "purple", "fad")
+                case "adc": users[user].pcs.adc["ashjd"] = new adc(200, 300, "purple", "fad")
             }
             console.log(users[user])
         }

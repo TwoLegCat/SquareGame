@@ -5,7 +5,7 @@ function check() {
     let name = document.querySelector("#name");
     let pw = document.getElementById("pw");
     if(pw == document.activeElement || name == document.activeElement) {
-        if(name.value.length > 16 || name.value.length == 0) {
+        if(name.value.length > 16 || name.value.length == 0 || isOffensive(name.value)) {
             info.innerHTML = "Invalid Name"
             info.style.color = "red";
         } else {
@@ -17,12 +17,12 @@ function check() {
         isOffensive(name.value)
     }
 }
-const pattern = /(penis|vagin|anu|sex|gay|scheiß|schwarz|nigg|f.ck|n.tte|boob|t.tte|br.st|enetr|ichse|ixxe)/i;
+const pattern = /(penis|vagin|anu|sex|gay|schei|schwarz|nigg|f.ck|n.tte|boob|t.tte|br.st|enetr|ichse|ixxe)/i;
 function isOffensive(name) {
     if (pattern.test(name)) {
-        console.log("not okay")
+        return true;
     } else {
-        console.log("okay")
+        return false;
     }
 }
 const user = {

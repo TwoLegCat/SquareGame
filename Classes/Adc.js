@@ -6,7 +6,7 @@ const upgrades = {
     cmds: [5, 10, 15, 20, 30],
     hp: [400, 1000, 1500, 3000, 5000]
 }
-class ADC extends Basics {
+class adc extends Basics {
     type = "adc";
     //paths
     range = 1; //wlan
@@ -29,7 +29,7 @@ class ADC extends Basics {
         this.id = id;
     }
     upgrade(path, lvl=0) {
-        switch(path) {
+        switch (path) {
             case "range": this.range = upgrades.range[lvl];
             break;
             case "atkspd": this.atkspd = upgrades.atkspd[lvl];
@@ -44,7 +44,7 @@ class ADC extends Basics {
         }
     }
 }
-module.exports = ADC;
+module.exports = adc;
 /*
 purple
 #ca92ec
